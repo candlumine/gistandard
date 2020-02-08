@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
-# __author__ : RobbieHan
-# __data__  : 2017/11/10
+# __author__ : RobbieHan, Candlumine
+# __data__  : 2020/01/08
 
 import re
 
@@ -17,7 +17,7 @@ class MenuMiddleware(MiddlewareMixin):
         :param request:
         :return:
         """
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             user = request.user
             permissions_item_list = user.roles.values('permissions__id',
                                                       'permissions__title',
